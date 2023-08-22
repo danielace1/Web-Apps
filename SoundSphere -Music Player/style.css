@@ -140,6 +140,9 @@ body {
 }
 
 @media screen and (max-width: 370px) {
+    .card {
+    margin-top: 25px;
+  }
   .card .track-image {
     width: 200px;
     height: 200px;
