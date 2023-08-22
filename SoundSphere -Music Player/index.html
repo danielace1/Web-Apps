@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <title>SoundSphere - Music Player</title>
+
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <!-- Music Player -->
+    <div class="container">
+        <div class="row justify-content-center pt-md-2 pt-lg-3">
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                <div class="card p-5 mt-xl-4">
+                    <div class="logo">
+                        <img src="./assets/favicon.png" alt="Logo" width="30" height="24" class="img-fluid">
+                    </div>
+                    <h5 class="text-center now-playing">Playing x of y</h5>
+                    <img class="track-image img-fluid">
+                    <div class="card-text mt-4">
+                        <h5 class="text-center track-name">Track Name</h5>
+                        <p class="text-center track-artist">Track Artist</p>
+                        <div class="d-flex justify-content-center">
+                            <span class="current-time">00:00</span>
+                            <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo()">
+                            <span class="total-duration">00:00</span>
+                        </div>
+                        <div class="buttons d-flex justify-content-center mt-3">
+                            <div class="random-track" onclick="randomTrack()">
+                                <i class="fas fa-random"></i>
+                            </div>
+                            <div class="prev-track" onclick="prevTrack()">
+                                <i class="fas fa-step-backward"></i>
+                            </div>
+                            <div class="playpause-track" onclick="playpauseTrack()">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="next-track" onclick="nextTrack()">
+                                <i class="fas fa-step-forward"></i>
+                            </div>
+                            <div class="repeat-track" onclick="repeatTrack()">
+                                <i class="fas fa-repeat"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
